@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+%html
+  %head 
+    %title= @title || "3 Degrees  | The Ultimate Kite Surfing Trips"
+    %meta{:name => "keywords", :content => "kite surfing, kite surfing brazil, kite surfing cumbuco, kite surfing trips, kite surfing adventures, kite surfing packages, kite surfing lessons, kite surfing downwinders"}
+    %meta{:name => "description", :content => "3 degrees south is committed to providing you with a premium kite surfinggit branchg  experience.  Kite Surf in paradise along the Sunset Coast in Ceara, Brazil.  Stay at the magical Kite House and enjoy all Cumbuco and the surround areas have to offer.  Downwind along this beautiful coast to the incredible Jericoacoara and beyond."}
+    %meta{"http-equiv" => "content-language", :content => "es"} 
+    
+    = stylesheet_link_tag 'main'
+    /[if IE]
+      = stylesheet_link_tag 'ie'
+    
+    = javascript_include_tag :defaults
+    
+    = yield(:head)
+    
+  %body{:onload => @google_maps ? "initialize()" : ""}
+    #wrapper
+      #main_content
+        #logo
+          = link_to image_tag("fb copy.png", :name => "logo"), root_url
+
+        #fblogo
+          = link_to image_tag("fb copy.png", :name => "logo"), "http://www.facebook.com/3degreessouth"
+        
+        
+        
+        %ul#nav
+          %li= link_to "example", items_path 
+          %ul.nav.first
+            %li=link_to "A Plan", trips_path
+          %li= link_to "Testamonials", trips_path
+          %ul.nav.first
+            %li=link_to "B Drop", trips_path
+          %li= link_to "About Us", about_us_path
+          %ul.nav.first
+            %li=link_to "C Drop", trips_path
+          %li= link_to "example", kitesurfing_path
+          %ul.nav.first
+            %li=link_to "D Drop", trips_path
+         
+        .clearfix{:style => "height:20px"}
+          
+        #content
+        
+          = yield
+        
+        
+        .clearfix
+      
+      #box_bottom
+        &nbsp;
+      
+      #push &nbsp;
+    
+    #footer
+      #footer_content
+        = link_to "copyright 3 Degrees South 2011"
+        
+    %div
+      :javascript
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-24585156-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();

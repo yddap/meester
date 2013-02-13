@@ -1,0 +1,98 @@
+- content_for(:head) do
+  %script{:src => "http://maps.google.com/maps/api/js?sensor=false", :type => "text/javascript"}
+
+%script{:type => "text/javascript"}
+  function initialize() {
+  var myLatlng = new google.maps.LatLng(-3.625000,-38.735);
+  var markerLatlng = new google.maps.LatLng(-3.625000, -38.740000);
+  var markerLatlng = new google.maps.LatLng(-3.624017, -38.740814);
+  var myOptions = {zoom: 16, center: myLatlng, mapTypeId: google.maps.MapTypeId.HYBRID}
+  var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+  var marker = new google.maps.Marker({position: markerLatlng, map: map, title:"The magic begins here", icon: 'http://www.printoria.es/images/construction-small.png'});
+  var contentString = '<img src="http://www.printoria.es/images/logo.jpg" width="200px"/>';
+  var infowindow = new google.maps.InfoWindow({content: contentString});
+  google.maps.event.addListener(marker, 'click', function() {infowindow.open(map,marker);});
+  }
+  
+
+.promo_image#map_canvas{:style => "width: 1000px; height: 460px"}
+
+.float_left{:style => "width: 50%;"}
+  %h2 Contact
+  
+  %table
+    %tr
+      %td= image_tag "contact_tlf.png"
+      %td +55 (85) 8515 8918,  +44 7767 245469
+    %tr  
+      %td= image_tag "contact_email.png"
+      %td= mail_to "info@3degreessouth.com"
+    %tr
+      %td= image_tag "contact_address.png"
+      %td 3264 Avenida Das Dunas, Cumbuco, Ceara, Brazil
+    %tr
+      %td= image_tag "contact_skype.png"
+      %td threedegreessouth
+
+
+.float_left{:style => "width: 50%;"}
+  %h2 Location & getting here
+  
+  %p
+    We are based in Cumbuco, 45 minutes away from Fortaleza International airport which is served by direct flights from all over Europe and the rest of the world
+  %p
+    From Europe there are direct flights from Lisbon and Madrid with TAP, TAM and Iberia.  There are further services from Amsterdam and Italy.
+    Flight time is around 7 hours from Lisbon to Fortaleza and flights cost from €800
+  %p
+    Please contact us for flight information, we can also assist you with bookings
+    
+
+%h2 Founder
+
+%p
+  3 degrees south, a specialist kite surfing operation based in the north east of brazil, is the creation of David Cummane who has vast 
+  knowledge and experience in the area.  He personally leads all the trips
+
+%p
+  The ethos of 3 degrees south is to offer customers the ultimate kitesurfing trip where everything is catered for with excellent 
+  accommodation and service all supported by the valuable experience we have gained in the area.  We are based at the Kite House in 
+  Cumbuco for the entire season which runs from July to December
+  
+  
+%h2 Testamonials
+
+%p
+  Meet Clavea Ferreira, our very first customer.  She enjoyed the trip so much she has moved home and now lives in Jericoacoara.  
+  Can you get a better testamonial than that!?! “People!  I have to say that this trip from Cumbuco to Jeri was so good that three 
+  months later I moved to Jeri, i mean, just do the same, because telling you about the trip is not enough....... 
+  you have to see it for yourself” 
+  %span.black_text - Clavea Ferreira, Jericoacoara, Brazil
+
+%p
+  “The gaff and its crew are the antidote to survive the next eleven months until you get back!”
+  %span.black_text -  Inaki Penche, Madrid
+
+%p
+  "A mansion, one silly dog, two monkeys (not including the owner or any of the crew members), one laughing parrot, miles of virgin 
+  beaches, wind, sun, caipirinhas... thank you for sharing two seasons and making me learn so much! (not only about kiting, but about 
+  life and love)."
+  %span.black_text - Marta Uriel, Spain
+  
+%p
+  “The endless beaches, wind, sun and waves and the gorgeous gaff with the biggest pimp dog of all time (Ollie it's not you, sorry) 
+  alone make this destination a paradise for every passionate kiter. But the experiences together with the crew are what made my stays 
+  there truly unforgettable!’
+  %span.black_text - Leo Keonig, Boston, US
+%p
+  "A gorgeous house with amazing views, a lovely but crazy dog, fantastic hosts, amazing food, glorious weather for surfing and way, 
+  way too much alcohol!!! But the most amazing holiday I have had for a very long time. This place is not to be missed!!!”
+  %span.black_text - Julie O’Brien, UK
+%p
+  "The best way to see the Brazilian coast is with 3 degrees south, they are very humble and know all the local spots to chill, grill and 
+  shred, not to mention the best crib in Cumbuco! Great work guys!!"
+  %span.black_text -  Oli Berlic, Cocoa Beach Florida
+
+
+
+
+  

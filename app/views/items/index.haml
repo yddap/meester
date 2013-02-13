@@ -1,0 +1,25 @@
+- content_for :head do
+  = javascript_include_tag "galleria-1.2.4", "themes/twelve/galleria.twelve.min.js"
+
+.clearfix
+
+
+#gallery
+  - @items.each do |item|
+    = link_to image_tag(item.image.url(:thumb), :alt => item.caption, :title => item.title), item.image.url(:normal), :rel => item.image.url
+
+
+
+:javascript
+  $('#gallery').galleria({
+      width:1000,
+      height:500,
+      transition:'fadeslide',
+      transitionSpeed:1000,
+      initialTransition: 'fade',
+      autoplay: 6500,
+      _showProgress: true,
+      pauseOnInteraction: false,
+      carousel: false
+  });
+

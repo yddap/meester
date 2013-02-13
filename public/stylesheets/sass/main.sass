@@ -1,0 +1,377 @@
+@import imports
+ 
+
+// link jquery theme roller
+// http://jqueryui.com/themeroller/#ffDefault=Verdana%2C+Arial%2C+sans-serif&fwDefault=normal&fsDefault=1.1em&cornerRadius=6px&bgColorHeader=666666&bgTextureHeader=02_glass.png&bgImgOpacityHeader=60&borderColorHeader=333333&fcHeader=ffffff&iconColorHeader=ffffff&bgColorContent=000000&bgTextureContent=14_loop.png&bgImgOpacityContent=25&borderColorContent=555555&fcContent=ffffff&iconColorContent=cccccc&bgColorDefault=222222&bgTextureDefault=03_highlight_soft.png&bgImgOpacityDefault=35&borderColorDefault=444444&fcDefault=eeeeee&iconColorDefault=cccccc&bgColorHover=003147&bgTextureHover=03_highlight_soft.png&bgImgOpacityHover=33&borderColorHover=0b93d5&fcHover=ffffff&iconColorHover=ffffff&bgColorActive=0972a5&bgTextureActive=04_highlight_hard.png&bgImgOpacityActive=20&borderColorActive=26b3f7&fcActive=ffffff&iconColorActive=222222&bgColorHighlight=eeeeee&bgTextureHighlight=03_highlight_soft.png&bgImgOpacityHighlight=80&borderColorHighlight=cccccc&fcHighlight=2e7db2&iconColorHighlight=4b8e0b&bgColorError=f4576c&bgTextureError=07_diagonals_medium.png&bgImgOpacityError=30&borderColorError=c50d1a&fcError=111111&iconColorError=e6d400&bgColorOverlay=5c5c5c&bgTextureOverlay=01_flat.png&bgImgOpacityOverlay=50&opacityOverlay=80&bgColorShadow=cccccc&bgTextureShadow=01_flat.png&bgImgOpacityShadow=30&opacityShadow=60&thicknessShadow=7px&offsetTopShadow=-7px&offsetLeftShadow=-7px&cornerRadiusShadow=8px
+
+
+*
+  :padding 0
+  :margin 0
+  
+html
+  :font 
+    :family "Microsoft Sans Serif", Myriad, Myriad Pro, Arial, verdana
+    :size 0.9em
+  :color $dark_grey
+  :height 100%
+
+body
+  :height 100%
+  :background-color #e3e3dd
+  
+  
+a
+  :color $green
+  :text-decoration none
+  :outline none
+  :-moz-outline-style none
+  
+
+a:hover
+  :text-decoration none
+
+img
+  :border none
+
+ul
+  li
+    :text-indent 20px
+    :color $dark_grey
+    :list-style-type circle
+    :list-style-position inside
+
+
+p
+  :padding-bottom 20px
+  :line-height 1.7em
+
+h1
+  :color $light_green
+  :font-size 35px
+  :padding-bottom 15px
+    
+.black_text
+  :color $black
+  :display inline
+
+.green_header_text
+  :color $light_green
+  :font
+    :size 1.3em
+  
+  
+  span
+    :padding-right 10px
+    :vertical-align middle
+    
+  img
+    :display inline
+    :vertical-align middle
+  
+h2
+  :font
+    :size 1.2em
+  :padding-bottom 10px
+  :color $light_green
+  :font
+    :size 1.3em
+  :padding-bottom 18px
+
+th
+  :text-align left
+
+ 
+b
+  :color $dark_grey
+  
+
+.clearfix
+  :display inline-block
+  :content " "
+  :font-size 0
+  :display block
+  :clear both
+  :visibility hidden
+  :line-height 0
+  :height 0
+
+.float_left
+  :display block
+  :float left
+
+.float_left_left
+  :display block
+  :float left
+  :margin-left -76px
+
+.float_right
+  :display block
+  :float right
+
+#wrapper
+  :background
+    :image url(../images/bg.gif)
+    :repeat repeat-x
+    :color $brown
+  :min-height 100%
+  :height auto !important
+  :height 100%
+  :margin 0 auto -100px
+
+#main_content
+  :background
+    :image url(../images/box_middle.png)
+    :repeat y-repeat
+  :width 1085px
+  :margin 0 auto
+  :padding 20px 0px 70px 0px
+  :min-height 400px
+  
+  #content
+    :width 850px
+    :margin 0 auto
+  
+#box_bottom
+  :margin 0 auto
+  :width 1085px
+  :height 53px
+  :background
+    :image url(../images/box_bottom.png) 
+    :repeat no-repeat
+
+#logo
+  :padding
+    :left 65px
+  :float left
+  
+  img
+    :width 200px
+
+
+#nav, .nav, #nav .nav li
+  :padding 0px
+  :margin 0px
+
+#nav li
+  :float left
+  :display inline
+  :cursor pointer
+  :list-style none
+  :padding 43px 40px 0px 10px
+  :position relative
+
+#nav li ul.first
+  :display block
+  :left -100px
+  :top 100%
+
+li>ul
+  :top auto
+  :left auto
+
+li, li a 
+  :text-decoration none 
+  :color #000
+
+#nav .nav li
+  :width 100%
+  :text-indent 10px
+  :line-height 30px
+  :margin-right 10px
+  :border-left none
+  :border-right none
+  :background #fff
+
+#nav li li, #nav li li a
+  :display block
+      
+
+#nav li a
+  :display block
+  :width inherit
+  :height inherit
+
+ul.nav
+  :display none
+
+
+#nav li:hover > a, #nav li:hover
+  :color $green
+
+li:hover ul
+  :display block
+
+li:hover .nav
+  :display block
+  :position absolute
+  :width 200px
+  :top -2px
+  :left 50%
+
+
+li:hover
+  :position relative
+
+
+
+
+
+.dates_table
+  tr
+    th
+      :color $light_green
+      :font-size 1.2em
+      :width 300px
+      
+
+
+.prices_table
+  tr
+    th
+      :text-align center
+      :white-space nowrap
+      :color $light_green
+      :font-size 1.5em
+      :border 1px solid $light_green
+      
+    td.first
+      :text-align left
+      :white-space nowrap
+      :border 1px solid $light_green
+      :width 450px
+      :padding 10px
+    
+    td.values
+      :border 1px solid $light_green
+      :text-align center
+      :width 100px
+      
+.special_column
+  :width 150px
+  
+  
+#fblogo
+  :float right
+  :padding
+    :top 24px
+    :right 100px
+
+
+  img
+    :width 35px
+
+#PDF_link
+  :float right
+  :width 200px
+  :text-align right
+  
+  img
+    :margin 0 auto
+    :width 35px
+    :padding-left 20px
+    
+  span
+    :margin 0 auto
+    :color $light_green
+    :padding-left 20px
+
+#push
+  :height 100px
+  :clear both
+
+#footer
+  :clear both
+  :height 100px
+  :text-align center
+  :background-color $brown
+  
+  #footer_content
+    :margin 0 auto
+    :width 1000px
+    :padding-top 50px
+    :color $black
+    :font-size 1.1em
+    
+    a
+      :font-size 1.1em
+      :color $black
+  
+    a:hover
+      :text-decoration underline
+
+.promo_image
+  :margin 0 auto
+  :margin-left -25px
+  :margin-bottom 40px
+
+.table_trip_dates
+  :margin-left 30px
+  :margin-bottom 20px
+
+
+.promo_image
+  :margin 0 auto
+  :margin-left -76px
+  :margin-bottom 80px
+
+  
+  img
+    :width 1000px
+
+    
+.box
+  :background-image url(../images/backgrounds/big_box_top.png)
+  :background-repeat no-repeat
+  
+  .box_body
+    :background-image url(../images/backgrounds/big_box_center.png)
+    :background-repeat repeat-y
+    :margin-top 32px
+
+  .box_bottom
+    :background-image url(../images/backgrounds/big_box_bottom.png)
+    :background-repeat no-repeat
+    :height 32px
+  
+
+//==========================================/
+
+
+.fieldWithErrors
+  :color $red
+  
+  input, textarea
+    :border 1px
+    :border-color $light_red
+    :border-style dotted
+
+#errorExplanation
+  :font-weight bold
+  :padding 7px
+  :padding-bottom 12px
+  :margin-bottom 12px
+  +error
+  +round_borders
+
+  h2
+    :display none
+    :text-align left
+    :font-weight bold
+    :padding 5px 5px 5px 15px
+    :font-size 12px
+    :background-color $dark_grey
+    :color $white
+
+  p
+    :color $black
+    :padding 5px
+
+
+  ul
+    li
+      :padding
+        :left 20px
+        :bottom 5px
+      :font-size 12px
+      :list-style square

@@ -1,0 +1,22 @@
+# SQLite version 3.x
+#   gem install sqlite3
+development:
+  bucket: amazon-bucket-dev
+  access_key_id: AKIAJLN2TZXZL7J7YGOQ
+  secret_access_key: 4GB6fb0JrNllEKhBwdy09TfiBP4e/bX/hKFzri1v
+  
+  
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  bucket: bucket-test
+  access_key_id: xxx
+  secret_access_key: xxx
+  
+production:
+  bucket: amazon-bucket-pro
+  access_key_id: AKIAJLN2TZXZL7J7YGOQ
+  secret_access_key: 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
+  
+  
